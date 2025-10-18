@@ -43,10 +43,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 3 - Dealership Session App</title>
+    <style>
+        label { display: block; margin-top: .5rem; }
+    </style>
 </head>
 <body>
 
-<h1>🚗 Project 3 – Dealership Inventory (Sessions)</h1>
+<h1>Project 3 – Dealership Inventory (Sessions)</h1>
 
 <?php if ($message): ?>
     <p class="msg"><?= htmlspecialchars($message) ?></p>
