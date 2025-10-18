@@ -7,6 +7,9 @@ if (!isset($_SESSION['dealership'])) {
     $_SESSION['dealership'] = new Dealership(); //create new dealership object after session is started
 }
 
+$dealership = $_SESSION['dealership'];
+$message = "";
+
 ?>
 
 <!DOCTYPE html>
