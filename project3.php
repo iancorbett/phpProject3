@@ -29,9 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
         $message = "Please fill out all fields correctly."; // display error message
     }
     } elseif (isset($_POST['action']) && $_POST['action'] === 'clear') {
-        $dealership->clearInventory();
+        $dealership->clearInventory(); //clear inventory function runs
         $_SESSION['dealership'] = $dealership;
-        $message = "🧹 Inventory cleared.";
+        $message = "Inventory cleared.";
     }
     
 
@@ -47,6 +47,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
 <body>
 
 <h1>🚗 Project 3 – Dealership Inventory (Sessions)</h1>
+
+<?php if ($message): ?>
+    <p class="msg"><?= htmlspecialchars($message) ?></p>
+  <?php endif; ?>
+
 
 <form method="POST">
     <input type="hidden" name="action" value="add">
