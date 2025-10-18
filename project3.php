@@ -75,11 +75,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
     <p>No vehicles in inventory yet.</p>
     <?php else: ?>
         <table>
+
             <thead>
             <tr>
                 <th>Make</th><th>Model</th><th>Year</th><th>Package</th><th>Price</th>
             </tr>
             </thead>
+
+            <tbody>
+        <?php foreach ($cars as $car): ?> <!--iterate through each car in the array-->
+          <?php $info = $car->toArray(); ?> <!--use imported toArray() method from Vehicle.php file-->
+          <tr>
+            <!--populate table with data-->
+            <td><?= htmlspecialchars($info['make']) ?></td>
+            <td><?= htmlspecialchars($info['model']) ?></td>
+            <td><?= htmlspecialchars($info['year']) ?></td>
+            <td><?= htmlspecialchars($info['package']) ?></td>
+            <td>$<?= number_format($info['price'], 2) ?></td>
+          </tr>
+        <?php endforeach; ?> <!--end loop-->
+      </tbody>
+
         </table>
 
      <?php endif; ?>
