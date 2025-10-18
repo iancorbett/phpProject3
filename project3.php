@@ -25,6 +25,11 @@ require_once __DIR__ . '/classes/Dealership.php';
     <label>Price: <input type="number" step="0.01" name="price" required></label>
     <button type="submit">Add Vehicle</button>
   </form>
+
+  <form method="POST" class="actions">
+    <input type="hidden" name="action" value="clear">
+    <button type="submit">Clear Inventory</button>
+  </form>
     
 </body>
 </html>
