@@ -5,13 +5,7 @@ Each user gets their own Dealership object stored in the PHP session, containing
 
 ---
 
-## Files Included
-File	Purpose
-project3.php	Main web page containing the form, display table, and all session logic
-classes/Vehicle.php	Defines the Vehicle class and its methods
-classes/Dealership.php	Defines the Dealership class and its methods; manages the vehicle inventory
-
----
+<img width="612" height="599" alt="Screenshot 2025-10-18 at 1 20 54 PM" src="https://github.com/user-attachments/assets/7e4f3b34-b318-4fa6-8639-644358373b9a" />
 
 ## Core Concepts Shown
 
