@@ -26,8 +26,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
         $_SESSION['dealership'] = $dealership;
         $message = "Vehicle added successfully!"; //display success message
     } else {
-        $message = "Please fill out all fields correctly.";
-}
+        $message = "Please fill out all fields correctly."; // display error message
+    }
+    } elseif (isset($_POST['action']) && $_POST['action'] === 'clear') {
+        $dealership->clearInventory();
+        $_SESSION['dealership'] = $dealership;
+        $message = "🧹 Inventory cleared.";
+    }
+    
 
 ?>
 
