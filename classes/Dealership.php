@@ -13,4 +13,9 @@ Class Dealership {
     public function getInventory(): array {
         return $this->inventory; //return all the inventory for this dealership
     }
+
+    //function will not return anything
+    public function clearInventory(): void {
+        $this->inventory = []; //set this dealerships inventory to an emty array
+    }
 }
