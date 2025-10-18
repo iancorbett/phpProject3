@@ -6,7 +6,7 @@ Class Dealership {
 
     //void means function does not return anything
     public function addVehicle(Vehicle $vehicle): void { //Vehicle refers to type of variable that can be passed in (only a Vehicle object), $vehicle refers to the one that was actually passed in
-        $this->inventory; //add this particular vehicle object to the dealership's inventory array
+        $this->inventory[] = $vehicle; //add this particular vehicle object to the dealership's inventory array
     }
 
     //this function will return an array

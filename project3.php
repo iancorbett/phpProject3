@@ -1,13 +1,20 @@
 <?php
 
-require_once __DIR__ . '/classes/Dealership.php';
 require_once __DIR__ . '/classes/Vehicle.php';
+require_once __DIR__ . '/classes/Dealership.php';
+
 
 session_start();
+//session_destroy();
+//exit;
 
-if (!isset($_SESSION['dealership'])) {
-    $_SESSION['dealership'] = new Dealership(); //create new dealership object after session is started
-}
+
+if (
+    !isset($_SESSION['dealership']) ||
+    !($_SESSION['dealership'] instanceof Dealership)
+  ) {
+    $_SESSION['dealership'] = new Dealership();
+  }
 
 $dealership = $_SESSION['dealership'];
 $message = "";
