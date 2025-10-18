@@ -1,8 +1,9 @@
 <?php
 
-session_start();
 require_once __DIR__ . '/classes/Dealership.php';
 require_once __DIR__ . '/classes/Vehicle.php';
+
+session_start();
 
 if (!isset($_SESSION['dealership'])) {
     $_SESSION['dealership'] = new Dealership(); //create new dealership object after session is started
