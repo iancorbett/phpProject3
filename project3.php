@@ -73,7 +73,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
   <?php $cars = $dealership->getInventory(); ?> <!--$cars is an array of vehicles in the dealership's inventory-->
   <?php if (empty($cars)): ?>
     <p>No vehicles in inventory yet.</p>
-  
+    <?php else: ?>
+        <table>
+            <thead>
+            <tr>
+                <th>Make</th><th>Model</th><th>Year</th><th>Package</th><th>Price</th>
+            </tr>
+            </thead>
+        </table>
+
+     <?php endif; ?>
 
 </body>
 </html>
