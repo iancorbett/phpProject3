@@ -96,6 +96,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
         <?php endforeach; ?> <!--end loop-->
       </tbody>
 
+      <tfoot>
+        <tr>
+          <td colspan="4" style="text-align:right;">Total Value:</td>
+          <td><strong>$<?= number_format($dealership->totalValue(), 2) ?></strong></td>
+        </tr>
+      </tfoot>
+
         </table>
 
      <?php endif; ?>
