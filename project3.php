@@ -19,6 +19,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
         $price = (float)($_POST['price'] ?? 0);
 
     }
+
+    if ($make && $model && $year && $package && $price > 0) { //if all fields are filled out
+        $vehicle = new Vehicle($make, $model, $year, $package, $price); //create new vehicle object
+        $dealership->addVehicle($vehicle); //use the imported addvehicle methhod
+        $_SESSION['dealership'] = $dealership;
+        $message = "Vehicle added successfully!"; //display success message
+    } else {
 }
 
 ?>
