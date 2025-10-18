@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
         $package = trim($_POST['package'] ?? '');
         $price = (float)($_POST['price'] ?? 0);
 
-    }
+    
 
     if ($make && $model && $year && $package && $price > 0) { //if all fields are filled out
         $vehicle = new Vehicle($make, $model, $year, $package, $price); //create new vehicle object
@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
         $_SESSION['dealership'] = $dealership;
         $message = "Inventory cleared.";
     }
+}
     
 
 ?>
