@@ -67,6 +67,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
     <input type="hidden" name="action" value="clear">
     <button type="submit">Clear Inventory</button>
   </form>
-    
+
+  <h2>Current Inventory</h2>
+
+  <?php $cars = $dealership->getInventory(); ?> <!--$cars is an array of vehicles in the dealership's inventory-->
+  <?php if (empty($cars)): ?>
+    <p>No vehicles in inventory yet.</p>
+  
+
 </body>
 </html>
