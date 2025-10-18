@@ -10,6 +10,17 @@ if (!isset($_SESSION['dealership'])) {
 $dealership = $_SESSION['dealership'];
 $message = "";
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
+    if (isset($_POST['action']) && $_POST['action'] === 'add') { //if add action is taken
+        $make = trim($_POST['make'] ?? '');
+        $model = trim($_POST['model'] ?? '');
+        $year = (int)($_POST['year'] ?? 0);
+        $package = trim($_POST['package'] ?? '');
+        $price = (float)($_POST['price'] ?? 0);
+
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
