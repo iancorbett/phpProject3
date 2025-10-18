@@ -18,4 +18,13 @@ Class Dealership {
     public function clearInventory(): void {
         $this->inventory = []; //set this dealerships inventory to an emty array
     }
+
+    //returns sum total of all cars in dealership as a float
+    public function totalValue(): float {
+        $sum = 0;
+        foreach ($this->inventory as $car) {
+            $sum += $car->price;
+        }
+        return $sum;
+    }
 }
