@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
         $_SESSION['dealership'] = $dealership;
         $message = "Vehicle added successfully!"; //display success message
     } else {
+        $message = "Please fill out all fields correctly.";
 }
 
 ?>
