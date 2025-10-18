@@ -45,6 +45,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //run this if post request is made
     <title>Project 3 - Dealership Session App</title>
     <style>
         label { display: block; margin-top: .5rem; }
+        form { margin-bottom: 2rem; }
+        input { padding: .3rem .5rem; width: 200px; }
+        button { margin-top: 2rem;}
     </style>
 </head>
 <body>
