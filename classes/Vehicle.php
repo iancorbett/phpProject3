@@ -14,4 +14,8 @@ class Vehicle {
         $this->package = $package;
         $this->price = $price;
     }
+
+    public function summary(): string {
+        return "{$this->year} {$this->make} {$this->model} ({$this->package}) - $" . number_format($this->price, 2);
+    }
 }
